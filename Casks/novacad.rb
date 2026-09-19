@@ -1,9 +1,8 @@
-cask "novacad-mac" do
+cask "novacad" do
   version "1.2.3"
   sha256 "b6f99298298f25a93677381965bf9c5c36c0b40a53f3570425f28e6f476f19c5"
 
-  url "https://github.com/ryandirezze/NovaCAD-Mac/releases/download/v#{version}/NovaCAD-#{version}.pkg",
-      verified: "github.com/ryandirezze/NovaCAD-Mac/"
+  url "https://github.com/ryandirezze/NovaCAD-Mac/releases/download/v#{version}/NovaCAD-#{version}.pkg"
   name "NovaCAD"
   desc "Native macOS DWG/DXF viewer, markup, and data tooling for technical drawings"
   homepage "https://github.com/ryandirezze/NovaCAD-Mac"
@@ -13,7 +12,7 @@ cask "novacad-mac" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
   depends_on arch: :arm64
 
   pkg "NovaCAD-#{version}.pkg"
